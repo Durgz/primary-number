@@ -1,19 +1,19 @@
 <html>
     <body>
         <script>
-            for (var counter = 1; counter <= 100; counter++) {
-
-    var notPrime = false;
-    for (var i = 2; i <= counter; i++) {
-        if (counter%i===0 && i!==counter) {
-            notPrime = true;
-        }
-    }
-    if (notPrime === false) {
-                document.write(counter);
-                document.write('<br>');
-    }
-}
+            for (var counter = 2; counter <= 100; counter++) {
+                var notPrime = false;
+                for (var i = 2; i <= counter/2; i++) {
+                    if (counter%i===0){
+                        notPrime = true;
+                        break;
+                    }
+                }
+                if (notPrime === false) {
+                    document.write(counter);
+                    document.write('<br>');
+                }
+            }
         </script>
     </body>
 </html>
